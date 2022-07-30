@@ -50,5 +50,22 @@ public class Main {
 
         System.out.println("Верное написание Ф. И. О. сотрудника с заглавных букв — " + fullName);
 
+        //task 6
+
+        String firstSetOfNumbers = "135";
+        String secondSetOfNumbers = "246";
+        String fullSetOfNumbers;
+
+        char[] firstSet = firstSetOfNumbers.toCharArray();
+        char[] secondSet = secondSetOfNumbers.toCharArray();
+
+        StringBuilder fullSet = new StringBuilder();
+        for (int i = 0; i < firstSet.length; i++) {
+            fullSet.append(firstSet[i]);
+            fullSet.append(secondSet[i]);
+        }
+        fullSetOfNumbers = fullSet.toString();
+        System.out.println(fullSetOfNumbers);
+
     }
 }
