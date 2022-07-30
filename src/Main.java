@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         homework7();
@@ -66,6 +68,22 @@ public class Main {
         }
         fullSetOfNumbers = fullSet.toString();
         System.out.println(fullSetOfNumbers);
+
+        //task7
+
+        String setOfLetters = "gkaabcccpfrtprcddefgghiijjkk";
+
+        String[] setSplitted = setOfLetters.split("");
+        Arrays.sort(setSplitted);
+
+        for (int i = 0; i < setSplitted.length - 1; i++) {
+            if (setSplitted[i].equals(setSplitted[i + 1])) {
+                setSplitted[i] = "";
+            }
+        }
+        setOfLetters = String.join("", setSplitted);
+
+        System.out.println(setOfLetters);
 
     }
 }
