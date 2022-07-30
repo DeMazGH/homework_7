@@ -20,5 +20,17 @@ public class Main {
 
         fullName = "Иванов Семён Семёнович";
         System.out.println(fullName.replace("ё", "е").replace("Ё", "Е"));
+
+        //task4
+
+        fullName = "Petrov Petr Petrovich";
+        firstName = fullName.substring(fullName.indexOf(' ') + 1, fullName.lastIndexOf(' '));
+        middleName = fullName.substring(fullName.lastIndexOf(' ') + 1);
+        lastName = fullName.substring(0, fullName.indexOf(' '));
+
+        System.out.println("Имя сотрудника — " + firstName);
+        System.out.println("Фамилия сотрудника — " + lastName);
+        System.out.println("Отчество сотрудника — " + middleName);
+
     }
 }
