@@ -40,17 +40,31 @@ public class Main {
 
         //task5
 
-        fullName = "ivanov ivan ivanovich";
-        char[] name = fullName.toCharArray();
-        name[0] = Character.toUpperCase(name[0]);
-        name[fullName.indexOf(' ') + 1] = Character.toUpperCase(name[fullName.indexOf(' ') + 1]);
-        name[fullName.lastIndexOf(' ') + 1] = Character.toUpperCase(name[fullName.lastIndexOf(' ') + 1]);
 
-        StringBuilder fullNameBuilder = new StringBuilder();
-        for (char symbol : name) {
-            fullNameBuilder.append(symbol);
+        fullName = "ivanov ivan ivanovich";
+
+        String[] names = fullName.split(" ");
+        StringBuilder fullNameStringBuilder = new StringBuilder();
+
+        for (String nameWord : names) {
+            StringBuilder name = new StringBuilder(nameWord);
+            name.setCharAt(0, Character.toUpperCase(name.charAt(0)));
+            fullNameStringBuilder.append(" ").append(name);
         }
-        fullName = fullNameBuilder.toString();
+
+        fullName = String.valueOf(fullNameStringBuilder);
+
+//        fullName = "ivanov ivan ivanovich";
+//        char[] name = fullName.toCharArray();
+//        name[0] = Character.toUpperCase(name[0]);
+//        name[fullName.indexOf(' ') + 1] = Character.toUpperCase(name[fullName.indexOf(' ') + 1]);
+//        name[fullName.lastIndexOf(' ') + 1] = Character.toUpperCase(name[fullName.lastIndexOf(' ') + 1]);
+//
+//        StringBuilder fullNameBuilder = new StringBuilder();
+//        for (char symbol : name) {
+//            fullNameBuilder.append(symbol);
+//        }
+//        fullName = fullNameBuilder.toString();
 
         System.out.println("Верное написание Ф. И. О. сотрудника с заглавных букв — " + fullName);
 
