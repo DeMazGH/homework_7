@@ -47,8 +47,8 @@ public class Main {
         name[fullName.lastIndexOf(' ') + 1] = Character.toUpperCase(name[fullName.lastIndexOf(' ') + 1]);
 
         StringBuilder fullNameBuilder = new StringBuilder();
-        for (char c : name) {
-            fullNameBuilder.append(c);
+        for (char symbol : name) {
+            fullNameBuilder.append(symbol);
         }
         fullName = fullNameBuilder.toString();
 
