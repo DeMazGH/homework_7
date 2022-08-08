@@ -43,8 +43,8 @@ public class Main {
         fullName = "ivanov ivan ivanovich";
         char[] name = fullName.toCharArray();
         name[0] = Character.toUpperCase(name[0]);
-        name[fullName.indexOf(' ') + 1] = Character.toUpperCase(name[fullName.indexOf(' ') + 1]);
 
+        name[fullName.indexOf(' ') + 1] = Character.toUpperCase(name[fullName.indexOf(' ') + 1]);
         name[fullName.lastIndexOf(' ') + 1] = Character.toUpperCase(name[fullName.lastIndexOf(' ') + 1]);
 
         StringBuilder fullNameBuilder = new StringBuilder();
